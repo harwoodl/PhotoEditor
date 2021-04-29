@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<SplitPane dividerPositions="0.5" prefHeight="820.0" prefWidth="1294.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harwoodl.Controller">
+   <items>
+      <VBox alignment="TOP_CENTER" prefHeight="592.0" prefWidth="487.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="707.0" fitWidth="1110.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="117.0" prefWidth="1110.0" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefHeight="592.0" prefWidth="175.0">
+         <children>
+            <Button fx:id="openButton" defaultButton="true" mnemonicParsing="false" onAction="#open" onMouseEntered="#enlarge" onMouseExited="#shrink" prefHeight="48.0" prefWidth="126.0" text="Open">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="saveButton" disable="true" mnemonicParsing="false" onAction="#save" onMouseEntered="#enlarge" onMouseExited="#shrink" prefHeight="48.0" prefWidth="126.0" text="Save">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="reloadButton" disable="true" mnemonicParsing="false" onAction="#reload" onMouseEntered="#enlarge" onMouseExited="#shrink" prefHeight="48.0" prefWidth="126.0" text="Reload">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="grayscaleButton" disable="true" mnemonicParsing="false" onAction="#grayscale" onMouseEntered="#enlarge" onMouseExited="#shrink" prefHeight="48.0" prefWidth="126.0" text="Grayscale">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="negativeButton" disable="true" mnemonicParsing="false" onAction="#negative" onMouseEntered="#enlarge" onMouseExited="#shrink" prefHeight="48.0" prefWidth="126.0" text="Negative">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="saturateButton" disable="true" mnemonicParsing="false" onAction="#saturate" onMouseEntered="#enlarge" onMouseExited="#shrink" prefHeight="48.0" prefWidth="126.0" text="Saturate">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="desaturateButton" disable="true" mnemonicParsing="false" onAction="#desaturate" onMouseEntered="#enlarge" onMouseExited="#shrink" prefHeight="48.0" prefWidth="126.0" text="Desaturate">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin></Button>
+            <Button fx:id="redButton" disable="true" mnemonicParsing="false" onAction="#red" onMouseDragEntered="#enlarge" onMouseDragExited="#shrink" onMouseEntered="#enlarge" onMouseExited="#shrink" prefHeight="48.0" prefWidth="126.0" text="Red">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="redGrayButton" disable="true" mnemonicParsing="false" onAction="#redGray" onMouseEntered="#enlarge" onMouseExited="#shrink" prefHeight="48.0" prefWidth="126.0" text="Red-Gray">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="brightnessLabel" opacity="0.3" text="Brightness" underline="true">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri Light" size="12.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_CENTER" prefHeight="44.0" prefWidth="175.0">
+               <children>
+                  <Button fx:id="minusButton" disable="true" mnemonicParsing="false" onAction="#unbrighten" onMouseEntered="#enlarge" onMouseExited="#shrink" prefHeight="25.0" prefWidth="40.0" text="-" />
+                  <Button fx:id="addButton" disable="true" mnemonicParsing="false" onAction="#brighten" onMouseEntered="#enlarge" onMouseExited="#shrink" prefHeight="25.0" prefWidth="40.0" text="+" />
+               </children>
+            </HBox>
+            <Button fx:id="sharpenButton" disable="true" mnemonicParsing="false" onAction="#sharpen" text="Sharpen">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="blurButton" disable="true" mnemonicParsing="false" onAction="#blur" prefHeight="25.0" prefWidth="60.0" text="Blur">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <ColorPicker fx:id="colorPicker" disable="true" prefHeight="31.0" prefWidth="125.0" />
+            <Button fx:id="filterButton" disable="true" mnemonicParsing="false" onAction="#convertToColor" onMouseEntered="#enlarge" onMouseExited="#shrink" prefHeight="25.0" prefWidth="84.0" text="Add Filter">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <HBox alignment="CENTER">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="undoButton" disable="true" mnemonicParsing="false" onAction="#undo" text="Undo" />
+               </children>
+            </HBox>
+            <Label fx:id="statusLabel" text="Save Status: " visible="false">
+               <font>
+                  <Font name="Cambria" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="saveLabel" text="***File Saved***" visible="false">
+               <font>
+                  <Font name="Cambria" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </items>
+</SplitPane>
